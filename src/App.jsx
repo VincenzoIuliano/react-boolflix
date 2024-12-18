@@ -26,6 +26,26 @@ function App() {
       console.error(err)
       setMovies([])
     })
+
+    axios.get('https://api.themoviedb.org/3/search/tv',{
+      params: {
+        api_key: API_KEY,
+        query
+      }
+    }).then(res => {
+      console.log(res.data)
+      const mappedSeries = res.data.results.map(item => {
+        return {
+          ...item,
+          title: item.name,
+          original_title: item.original_name
+        }
+      })
+      setSeries(mappedSeries)
+    }).catch(err => {
+      console.error(err)
+      setSeries([])
+    })
   }
 
   return (

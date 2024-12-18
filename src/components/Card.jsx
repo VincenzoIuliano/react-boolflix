@@ -1,6 +1,6 @@
 export default function Card ( {item} ) {
 
-    const { title, original_title , vote_average , original_language, poster_path } = item
+    const { title, original_title , name, original_name,  vote_average , original_language, poster_path } = item
 
     return (
         <div>

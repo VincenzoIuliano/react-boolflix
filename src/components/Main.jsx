@@ -2,9 +2,9 @@ import { useContext } from "react";
 import ItemList from "./ItemList";
 import GlobalContext from "../assets/context/GlobalContext";
 
-export default function Main() {(GlobalContext)
+export default function Main() {
 
-    const { movies , series} = useContext
+    const { movies , series} = useContext(GlobalContext)
 
     return (
         <main>

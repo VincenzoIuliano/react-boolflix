@@ -6,7 +6,7 @@ export default function ItemList({ items = [] , title }) {
         <div className="container">
           <h2>{title}</h2>
         </div>
-        <div className="containter">
+        <div className="container">
           <ul className='grid'>
             {items.map((item) => (
               <li key={item.id}>
